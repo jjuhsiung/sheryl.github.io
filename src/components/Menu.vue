@@ -1,42 +1,66 @@
 <template>
-  <div class="menu">
-    <div class="menu-item">
-      <a href="/Resume">Resume</a>
-    </div>
-    <div class="menu-item">
-      <a href="/Home">Sheryl Hsiung</a>
-    </div>
-    <div class="menu-item">
-      <a href="/Profile">About</a>
-    </div>
-  </div>
+  <mdb-navbar color="warning" light>
+    <mdb-navbar-brand class="title"> Sheryl Hsiung </mdb-navbar-brand>
+    <mdb-navbar-toggler>
+      <mdb-navbar-nav>
+        <mdb-nav-item href="/" active>Home</mdb-nav-item>
+        <mdb-nav-item href="/Resume">Resume</mdb-nav-item>
+        <mdb-nav-item href="/Profile">About Me</mdb-nav-item>
+      </mdb-navbar-nav>
+      <form>
+        <mdb-input
+          type="text"
+          class="text-white"
+          placeholder="Search"
+          aria-label="Search"
+          label
+          navInput
+          waves
+          waves-fixed
+        />
+      </form>
+    </mdb-navbar-toggler>
+  </mdb-navbar>
 </template>
 
+
 <script>
+import {
+  mdbNavbar,
+  mdbNavbarBrand,
+  mdbNavbarToggler,
+  mdbNavbarNav,
+  mdbNavItem,
+  mdbInput,
+} from "mdbvue";
 export default {
-  name: "Menu",
+  name: "NavbarPage",
+  components: {
+    mdbNavbar,
+    mdbNavbarBrand,
+    mdbNavbarToggler,
+    mdbNavbarNav,
+    mdbNavItem,
+    mdbInput,
+  },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.menu-item {
-  flex: 1;
-  margin-top: 20px;
-  border: none;
-  text-align: center;
+
+<style>
+.title {
+  font-size: 60px;
 }
 
-a {
-  color: black;
-  font-size: 30px;
-  text-decoration: none;
-  font: bolder;
-  font-family: "Times New Roman";
+.navbar-nav {
+  font-size: 25px;
+}
+
+.nav-item {
+  padding: 40px;
 }
 </style>
+
+
+
+

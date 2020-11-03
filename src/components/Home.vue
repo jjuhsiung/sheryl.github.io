@@ -1,9 +1,8 @@
 <template>
   <div class="main">
-    <div class="bg">
-      <Menu class="menu" />
-    </div>
-     <HomeBox />
+    <Menu class="menu" />
+    <div class="bg"></div>
+    <HomeBox />
   </div>
 </template>
 
